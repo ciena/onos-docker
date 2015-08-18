@@ -1,5 +1,5 @@
-FROM onosproject/onos:1.2
+FROM onosproject/onos:latest
 MAINTAINER David Bainbridge <dbainbri@ciena.com>
-COPY ./docker-entry-point /docker-entry-point
-RUN chmod 755 /docker-entry-point
-ENTRYPOINT ["/docker-entry-point"]
+# with changes made to the latets ON.Labs container this is really no
+# longer needed, but kepts as an alias for now.
+ENTRYPOINT ["./bin/onos-service"]
